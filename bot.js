@@ -6,16 +6,10 @@ client.on('ready', () => {
 });
 
     client.on('ready', () => {
-     client.user.setActivity("- MineCraftSK | Road To 4K .",{type: 'Listening'});
+     client.user.setActivity("- MineCraftSK | Road To 4K .",{type: 'Playing'});
 
 });
 
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-            if (message.content.startsWith(prefix + "MineCraft Ping")) {
-        message.channel.sendMessage(':ping_pong: **__Pong! In__** `' + `${client.ping}` + ' ms`');
-    }
-});
 
 
 client.login(process.env.BOT_TOKEN);
